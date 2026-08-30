@@ -6,4 +6,9 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
+  runtimeConfig: {
+    smtpUser: process.env.SMTP_USER || "",
+    smtpAppPassword: process.env.SMTP_APP_PASSWORD || "",
+    contactTo: process.env.CONTACT_TO || "jon@theflipfixer.com",
+  },
 });

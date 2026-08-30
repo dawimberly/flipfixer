@@ -32,7 +32,7 @@
                 <Mail class="w-6 h-6 text-[#f08330] flex-shrink-0 mt-1" />
                 <div>
                   <h3 class="font-semibold text-white">Email</h3>
-                  <p class="text-gray-300">info@flipfixer.com</p>
+                  <p class="text-gray-300">info@theflipfixer.com</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -101,12 +101,29 @@
 
             <button
               type="submit"
-              class="w-full bg-[#f08330] hover:bg-[#ca5e11] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
+              :disabled="isSubmitting"
+              class="w-full bg-[#f08330] hover:bg-[#ca5e11] disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
             >
-              Send Message
+              {{ isSubmitting ? "Sending..." : "Send Message" }}
             </button>
 
-            <p class="text-sm text-gray-400 text-center mt-4">
+            <p
+              v-if="submitSuccess"
+              class="text-sm text-green-400 text-center mt-4"
+            >
+              Thanks — your message was sent. We'll get back to you within 24–48
+              hours.
+            </p>
+
+            <p
+              v-else-if="submitError"
+              class="text-sm text-red-400 text-center mt-4"
+            >
+              {{ submitError }} You can also call 210-436-9117 or email
+              info@theflipfixer.com.
+            </p>
+
+            <p v-else class="text-sm text-gray-400 text-center mt-4">
               We'll get back to you within 24-48 hours.
             </p>
           </form>
@@ -127,9 +144,32 @@ const formData = ref({
   message: "",
 });
 
-const handleSubmit = () => {
-  // Handle form submission logic here
-  console.log("Form submitted:", formData.value);
+const isSubmitting = ref(false);
+const submitSuccess = ref(false);
+const submitError = ref("");
+
+const handleSubmit = async () => {
+  isSubmitting.value = true;
+  submitSuccess.value = false;
+  submitError.value = "";
+
+  try {
+    await $fetch("/api/contact", {
+      method: "POST",
+      body: formData.value,
+    });
+
+    submitSuccess.value = true;
+    formData.value = { name: "", email: "", phone: "", message: "" };
+  } catch (error) {
+    const message =
+      error?.data?.statusMessage ||
+      error?.statusMessage ||
+      "We could not send your message right now.";
+    submitError.value = message;
+  } finally {
+    isSubmitting.value = false;
+  }
 };
 
 useHead({

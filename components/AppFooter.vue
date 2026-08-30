@@ -44,10 +44,10 @@
             <div class="flex items-center gap-3">
               <Mail class="w-5 h-5 text-[#f08330]" />
               <a
-                href="mailto:info@flipfixer.com"
+                href="mailto:info@theflipfixer.com"
                 class="hover:text-white transition-colors"
               >
-                info@flipfixer.com
+                info@theflipfixer.com
               </a>
             </div>
             <!-- <div class="flex items-center gap-3">
