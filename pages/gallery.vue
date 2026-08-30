@@ -197,137 +197,31 @@ import BeforeAfterSlider from "~/components/BeforeAfterSlider.vue";
 
 import beforeImage from "@/assets/images/kitchenbefore.jpg";
 import afterImage from "@/assets/images/kitchenafter.jpg";
-import gallery01 from "@/assets/images/gallery-01-modern-farmhouse-blue-accent-wall-wood-beam.jpg";
-import gallery02 from "@/assets/images/gallery-02-navy-island-butcher-block-counter.jpg";
-import gallery03 from "@/assets/images/gallery-03-charcoal-shaker-cabinets-black-subway-tile.jpg";
-import gallery04 from "@/assets/images/gallery-04-taupe-cabinets-herringbone-floor.jpg";
-import gallery05 from "@/assets/images/gallery-05-two-tone-white-navy-with-french-door-fridge.jpg";
-import gallery06 from "@/assets/images/gallery-06-bright-white-open-concept-with-fireplace-great-room.jpg";
-import gallery07 from "@/assets/images/gallery-07-vaulted-ceiling-skylights-white-cabinets.jpg";
-import gallery08 from "@/assets/images/gallery-08-gray-shaker-cabinets-tray-ceiling.jpg";
-import gallery09 from "@/assets/images/gallery-09-white-cabinets-black-island-pendant-lighting.jpg";
-import gallery10 from "@/assets/images/gallery-10-traditional-dark-wood-stone-mosaic-backsplash.jpg";
-import gallery11 from "@/assets/images/gallery-11-spa-tub-pebble-walk-in-shower.jpg";
-import gallery12 from "@/assets/images/gallery-12-walk-in-shower-stone-mosaic.jpg";
-import gallery13 from "@/assets/images/gallery-13-dark-wood-granite-breakfast-bar.jpg";
-import gallery14 from "@/assets/images/gallery-14-cream-cabinets-granite-island-cooktop.jpg";
-import gallery15 from "@/assets/images/gallery-15-navy-island-gold-hardware.jpg";
-import gallery16 from "@/assets/images/gallery-16-charcoal-island-industrial-stools.jpg";
-import gallery17 from "@/assets/images/gallery-17-navy-island-pattern-tile-backsplash.jpg";
-import gallery18 from "@/assets/images/gallery-18-two-tone-white-gray-wine-rack.jpg";
-import gallery19 from "@/assets/images/gallery-19-white-shaker-pattern-tile-backsplash.jpg";
-import gallery20 from "@/assets/images/gallery-20-cream-cabinets-marble-look-counters.jpg";
-import gallery21 from "@/assets/images/gallery-21-white-kitchen-dark-herringbone-backsplash.jpg";
 
-const projectImages = [
-  {
-    src: gallery01,
-    alt: "Modern farmhouse kitchen with blue accent wall",
-    description:
-      "Quartz waterfall island, wood beam ceiling, and blue accent wall",
-  },
-  {
-    src: gallery02,
-    alt: "Navy island with butcher block counter",
-    description: "Navy island, butcher block top, and brick backsplash",
-  },
-  {
-    src: gallery03,
-    alt: "Charcoal shaker cabinets with black subway tile",
-    description: "Moody kitchen with charcoal cabinets and black subway tile",
-  },
-  {
-    src: gallery04,
-    alt: "Taupe cabinets with herringbone floor",
-    description: "Taupe cabinets, waterfall island, and herringbone floor",
-  },
-  {
-    src: gallery05,
-    alt: "Two-tone white and navy kitchen",
-    description: "White perimeter cabinets with a navy island",
-  },
-  {
-    src: gallery06,
-    alt: "Open concept kitchen with fireplace great room",
-    description: "Bright white kitchen opening to a stone fireplace great room",
-  },
-  {
-    src: gallery07,
-    alt: "Vaulted ceiling kitchen with skylights",
-    description: "Vaulted ceiling, skylights, and white cabinets",
-  },
-  {
-    src: gallery08,
-    alt: "Gray shaker cabinets with tray ceiling",
-    description: "Gray shaker cabinets, tray ceiling, and dark wood floors",
-  },
-  {
-    src: gallery09,
-    alt: "White cabinets with black island and pendants",
-    description: "White kitchen, black island, and pendant lighting",
-  },
-  {
-    src: gallery10,
-    alt: "Traditional dark wood kitchen",
-    description: "Dark wood cabinets with stone mosaic backsplash",
-  },
-  {
-    src: gallery11,
-    alt: "Spa bathroom with soaking tub and walk-in shower",
-    description:
-      "Jetted soaking tub and walk-in shower with pebble flooring",
-  },
-  {
-    src: gallery12,
-    alt: "Custom walk-in shower with stone-look tile",
-    description: "Stone-look tile, mosaic niche, bench, and rainfall head",
-  },
-  {
-    src: gallery13,
-    alt: "Dark wood and granite breakfast bar",
-    description: "Dark wood cabinets, granite counters, and stainless appliances",
-  },
-  {
-    src: gallery14,
-    alt: "Cream cabinets with granite island",
-    description: "Cream cabinets, granite island, and cooktop",
-  },
-  {
-    src: gallery15,
-    alt: "Navy island kitchen with gold hardware",
-    description: "Navy island with gold hardware accents",
-  },
-  {
-    src: gallery16,
-    alt: "Charcoal island kitchen with industrial stools",
-    description: "Charcoal island with industrial bar stools",
-  },
-  {
-    src: gallery17,
-    alt: "Navy island with pattern tile backsplash",
-    description: "Navy island with patterned tile backsplash",
-  },
-  {
-    src: gallery18,
-    alt: "Two-tone white and gray kitchen with wine rack",
-    description: "White and gray two-tone kitchen with built-in wine rack",
-  },
-  {
-    src: gallery19,
-    alt: "White shaker kitchen with pattern tile backsplash",
-    description: "White shaker cabinets with patterned tile backsplash",
-  },
-  {
-    src: gallery20,
-    alt: "Cream cabinets with marble-look counters",
-    description: "Cream cabinets with marble-look countertops",
-  },
-  {
-    src: gallery21,
-    alt: "White kitchen with dark herringbone backsplash",
-    description: "White kitchen with dark herringbone tile backsplash",
-  },
-];
+const galleryModules = import.meta.glob("@/assets/images/gallery-*.jpg", {
+  eager: true,
+  import: "default",
+});
+
+const titleFromGalleryPath = (path) => {
+  const file = path.split("/").pop().replace(/^gallery-\d+-/, "").replace(/\.jpg$/, "");
+  return file
+    .split("-")
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};
+
+const projectImages = Object.entries(galleryModules)
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([path, src]) => {
+    const title = titleFromGalleryPath(path);
+    return {
+      src,
+      alt: `Flip Fixer ${title}`,
+      description: title,
+    };
+  });
 
 const selectedImage = ref(null);
 
