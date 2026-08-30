@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 type ContactBody = {
   name?: string;
@@ -23,7 +23,7 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  if (!config.smtpUser || !config.smtpAppPassword) {
+  if (!config.resendApiKey) {
     throw createError({
       statusCode: 503,
       statusMessage:
@@ -31,21 +31,14 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-    auth: {
-      user: config.smtpUser,
-      pass: config.smtpAppPassword,
-    },
-  });
+  const resend = new Resend(config.resendApiKey);
+  const to = config.contactTo || "jon@theflipfixer.com";
+  const from =
+    config.contactFrom || "Flip Fixer Website <info@theflipfixer.com>";
 
-  const to = config.contactTo || config.smtpUser;
-
-  await transporter.sendMail({
-    from: `"Flip Fixer Website" <${config.smtpUser}>`,
-    to,
+  const { error } = await resend.emails.send({
+    from,
+    to: [to],
     replyTo: email,
     subject: `Website contact form — ${name}`,
     text: [
@@ -57,6 +50,15 @@ export default defineEventHandler(async (event) => {
       message,
     ].join("\n"),
   });
+
+  if (error) {
+    console.error("Resend error:", error);
+    throw createError({
+      statusCode: 502,
+      statusMessage:
+        "We could not send your message right now. Please call 210-436-9117.",
+    });
+  }
 
   return { ok: true };
 });
