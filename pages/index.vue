@@ -140,7 +140,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="gallery-preview">
             <img
-              src="~/assets/images/gallery/gallery-01-modern-farmhouse-blue-accent-wall-wood-beam.jpg"
+              src="~/assets/images/gallery-01-modern-farmhouse-blue-accent-wall-wood-beam.jpg"
               alt="Modern farmhouse kitchen remodel"
               class="w-full h-80 object-cover rounded-lg"
             />
@@ -148,7 +148,7 @@
 
           <div class="gallery-preview">
             <img
-              src="~/assets/images/gallery/gallery-04-taupe-cabinets-herringbone-floor.jpg"
+              src="~/assets/images/gallery-04-taupe-cabinets-herringbone-floor.jpg"
               alt="Kitchen with herringbone floor"
               class="w-full h-80 object-cover rounded-lg"
             />
@@ -156,7 +156,7 @@
 
           <div class="gallery-preview">
             <img
-              src="~/assets/images/gallery/gallery-03-charcoal-shaker-cabinets-black-subway-tile.jpg"
+              src="~/assets/images/gallery-03-charcoal-shaker-cabinets-black-subway-tile.jpg"
               alt="Charcoal shaker kitchen remodel"
               class="w-full h-80 object-cover rounded-lg"
             />
@@ -164,7 +164,7 @@
 
           <div class="gallery-preview">
             <img
-              src="~/assets/images/gallery/gallery-10-traditional-dark-wood-stone-mosaic-backsplash.jpg"
+              src="~/assets/images/gallery-10-traditional-dark-wood-stone-mosaic-backsplash.jpg"
               alt="Traditional dark wood kitchen"
               class="w-full h-80 object-cover rounded-lg"
             />

@@ -49,7 +49,7 @@
           <div class="spotlight-card group">
             <div class="relative overflow-hidden">
               <img
-                src="~/assets/images/gallery/gallery-06-bright-white-open-concept-with-fireplace-great-room.jpg"
+                src="~/assets/images/gallery-06-bright-white-open-concept-with-fireplace-great-room.jpg"
                 alt="Open concept kitchen and great room remodel"
                 class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -71,7 +71,7 @@
           <div class="spotlight-card group">
             <div class="relative overflow-hidden">
               <img
-                src="~/assets/images/gallery/gallery-01-modern-farmhouse-blue-accent-wall-wood-beam.jpg"
+                src="~/assets/images/gallery-01-modern-farmhouse-blue-accent-wall-wood-beam.jpg"
                 alt="Modern farmhouse kitchen remodel"
                 class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -197,22 +197,22 @@ import BeforeAfterSlider from "~/components/BeforeAfterSlider.vue";
 
 import beforeImage from "@/assets/images/kitchenbefore.jpg";
 import afterImage from "@/assets/images/kitchenafter.jpg";
-import gallery01 from "@/assets/images/gallery/gallery-01-modern-farmhouse-blue-accent-wall-wood-beam.jpg";
-import gallery02 from "@/assets/images/gallery/gallery-02-navy-island-butcher-block-counter.jpg";
-import gallery03 from "@/assets/images/gallery/gallery-03-charcoal-shaker-cabinets-black-subway-tile.jpg";
-import gallery04 from "@/assets/images/gallery/gallery-04-taupe-cabinets-herringbone-floor.jpg";
-import gallery05 from "@/assets/images/gallery/gallery-05-two-tone-white-navy-with-french-door-fridge.jpg";
-import gallery06 from "@/assets/images/gallery/gallery-06-bright-white-open-concept-with-fireplace-great-room.jpg";
-import gallery07 from "@/assets/images/gallery/gallery-07-vaulted-ceiling-skylights-white-cabinets.jpg";
-import gallery08 from "@/assets/images/gallery/gallery-08-gray-shaker-cabinets-tray-ceiling.jpg";
-import gallery09 from "@/assets/images/gallery/gallery-09-white-cabinets-black-island-pendant-lighting.jpg";
-import gallery10 from "@/assets/images/gallery/gallery-10-traditional-dark-wood-stone-mosaic-backsplash.jpg";
-import gallery13 from "@/assets/images/gallery/gallery-13-dark-wood-granite-breakfast-bar.jpg";
-import gallery14 from "@/assets/images/gallery/gallery-14-cream-cabinets-granite-island-cooktop.jpg";
-import gallery18 from "@/assets/images/gallery/gallery-18-two-tone-white-gray-wine-rack.jpg";
-import gallery19 from "@/assets/images/gallery/gallery-19-white-shaker-pattern-tile-backsplash.jpg";
-import gallery20 from "@/assets/images/gallery/gallery-20-cream-cabinets-marble-look-counters.jpg";
-import gallery21 from "@/assets/images/gallery/gallery-21-white-kitchen-dark-herringbone-backsplash.jpg";
+import gallery01 from "@/assets/images/gallery-01-modern-farmhouse-blue-accent-wall-wood-beam.jpg";
+import gallery02 from "@/assets/images/gallery-02-navy-island-butcher-block-counter.jpg";
+import gallery03 from "@/assets/images/gallery-03-charcoal-shaker-cabinets-black-subway-tile.jpg";
+import gallery04 from "@/assets/images/gallery-04-taupe-cabinets-herringbone-floor.jpg";
+import gallery05 from "@/assets/images/gallery-05-two-tone-white-navy-with-french-door-fridge.jpg";
+import gallery06 from "@/assets/images/gallery-06-bright-white-open-concept-with-fireplace-great-room.jpg";
+import gallery07 from "@/assets/images/gallery-07-vaulted-ceiling-skylights-white-cabinets.jpg";
+import gallery08 from "@/assets/images/gallery-08-gray-shaker-cabinets-tray-ceiling.jpg";
+import gallery09 from "@/assets/images/gallery-09-white-cabinets-black-island-pendant-lighting.jpg";
+import gallery10 from "@/assets/images/gallery-10-traditional-dark-wood-stone-mosaic-backsplash.jpg";
+import gallery13 from "@/assets/images/gallery-13-dark-wood-granite-breakfast-bar.jpg";
+import gallery14 from "@/assets/images/gallery-14-cream-cabinets-granite-island-cooktop.jpg";
+import gallery18 from "@/assets/images/gallery-18-two-tone-white-gray-wine-rack.jpg";
+import gallery19 from "@/assets/images/gallery-19-white-shaker-pattern-tile-backsplash.jpg";
+import gallery20 from "@/assets/images/gallery-20-cream-cabinets-marble-look-counters.jpg";
+import gallery21 from "@/assets/images/gallery-21-white-kitchen-dark-herringbone-backsplash.jpg";
 
 const projectImages = [
   {
