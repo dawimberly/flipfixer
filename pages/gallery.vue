@@ -49,8 +49,8 @@
           <div class="spotlight-card group">
             <div class="relative overflow-hidden">
               <img
-                src="~/assets/images/patio1.jpg"
-                alt="Complete Home Renovation"
+                src="~/assets/images/gallery/gallery-06-bright-white-open-concept-with-fireplace-great-room.jpg"
+                alt="Open concept kitchen and great room remodel"
                 class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div
@@ -60,10 +60,10 @@
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-3">Backyard Patio</h3>
+              <h3 class="text-xl font-semibold mb-3">Open Concept Kitchen</h3>
               <p class="text-gray-300">
-                An outdoor transformation featuring custom woodwork and a hidden
-                firepit.
+                Bright white cabinets, granite counters, and a stone fireplace tie
+                the kitchen and great room together.
               </p>
             </div>
           </div>
@@ -71,8 +71,8 @@
           <div class="spotlight-card group">
             <div class="relative overflow-hidden">
               <img
-                src="~/assets/images/kitchen4.jpg"
-                alt="Custom Creations"
+                src="~/assets/images/gallery/gallery-01-modern-farmhouse-blue-accent-wall-wood-beam.jpg"
+                alt="Modern farmhouse kitchen remodel"
                 class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div
@@ -82,11 +82,10 @@
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-3">Kitchen Overhaul</h3>
+              <h3 class="text-xl font-semibold mb-3">Modern Farmhouse Kitchen</h3>
               <p class="text-gray-300">
-                A complete kitchen transformation featuring custom cabinetry,
-                quartz countertops, and modern appliances that creates the
-                perfect cooking and entertaining space.
+                Quartz waterfall island, exposed wood beam ceiling, and a bold blue
+                accent wall in a San Antonio kitchen remodel.
               </p>
             </div>
           </div>
@@ -198,43 +197,104 @@ import BeforeAfterSlider from "~/components/BeforeAfterSlider.vue";
 
 import beforeImage from "@/assets/images/kitchenbefore.jpg";
 import afterImage from "@/assets/images/kitchenafter.jpg";
-import kitchen1Image from "@/assets/images/kitchen1.jpg";
-import kitchen3Image from "@/assets/images/kitchen3.jpg";
-import kitchen4Image from "@/assets/images/kitchen4.jpg";
-import patio2Image from "@/assets/images/patio2.jpg";
-import laundryImage from "@/assets/images/laundry.jpg";
-import bathroom1Image from "@/assets/images/bathroom1.jpg";
-// Sample project images - replace with actual project images
+import gallery01 from "@/assets/images/gallery/gallery-01-modern-farmhouse-blue-accent-wall-wood-beam.jpg";
+import gallery02 from "@/assets/images/gallery/gallery-02-navy-island-butcher-block-counter.jpg";
+import gallery03 from "@/assets/images/gallery/gallery-03-charcoal-shaker-cabinets-black-subway-tile.jpg";
+import gallery04 from "@/assets/images/gallery/gallery-04-taupe-cabinets-herringbone-floor.jpg";
+import gallery05 from "@/assets/images/gallery/gallery-05-two-tone-white-navy-with-french-door-fridge.jpg";
+import gallery06 from "@/assets/images/gallery/gallery-06-bright-white-open-concept-with-fireplace-great-room.jpg";
+import gallery07 from "@/assets/images/gallery/gallery-07-vaulted-ceiling-skylights-white-cabinets.jpg";
+import gallery08 from "@/assets/images/gallery/gallery-08-gray-shaker-cabinets-tray-ceiling.jpg";
+import gallery09 from "@/assets/images/gallery/gallery-09-white-cabinets-black-island-pendant-lighting.jpg";
+import gallery10 from "@/assets/images/gallery/gallery-10-traditional-dark-wood-stone-mosaic-backsplash.jpg";
+import gallery13 from "@/assets/images/gallery/gallery-13-dark-wood-granite-breakfast-bar.jpg";
+import gallery14 from "@/assets/images/gallery/gallery-14-cream-cabinets-granite-island-cooktop.jpg";
+import gallery18 from "@/assets/images/gallery/gallery-18-two-tone-white-gray-wine-rack.jpg";
+import gallery19 from "@/assets/images/gallery/gallery-19-white-shaker-pattern-tile-backsplash.jpg";
+import gallery20 from "@/assets/images/gallery/gallery-20-cream-cabinets-marble-look-counters.jpg";
+import gallery21 from "@/assets/images/gallery/gallery-21-white-kitchen-dark-herringbone-backsplash.jpg";
+
 const projectImages = [
   {
-    src: kitchen4Image,
-    alt: "Modern Kitchen Renovation",
-    description: "Complete kitchen remodel with custom cabinets and island",
+    src: gallery01,
+    alt: "Modern farmhouse kitchen with blue accent wall",
+    description:
+      "Quartz waterfall island, wood beam ceiling, and blue accent wall",
   },
   {
-    src: bathroom1Image,
-    alt: "Luxury Bathroom",
-    description: "Master bathroom renovation with custom tile work",
+    src: gallery02,
+    alt: "Navy island with butcher block counter",
+    description: "Navy island, butcher block top, and brick backsplash",
   },
   {
-    src: patio2Image,
-    alt: "Living Room Transformation",
-    description: "Open concept living room with custom built-ins",
+    src: gallery03,
+    alt: "Charcoal shaker cabinets with black subway tile",
+    description: "Moody kitchen with charcoal cabinets and black subway tile",
   },
   {
-    src: kitchen1Image,
-    alt: "Home Exterior",
-    description: "Complete exterior renovation with new siding and windows",
+    src: gallery04,
+    alt: "Taupe cabinets with herringbone floor",
+    description: "Taupe cabinets, waterfall island, and herringbone floor",
   },
   {
-    src: kitchen3Image,
-    alt: "Small Project",
-    description: "Quick turnaround bathroom update",
+    src: gallery05,
+    alt: "Two-tone white and navy kitchen",
+    description: "White perimeter cabinets with a navy island",
   },
   {
-    src: laundryImage,
-    alt: "Kitchen Update",
-    description: "Kitchen refresh with new countertops and backsplash",
+    src: gallery06,
+    alt: "Open concept kitchen with fireplace great room",
+    description: "Bright white kitchen opening to a stone fireplace great room",
+  },
+  {
+    src: gallery07,
+    alt: "Vaulted ceiling kitchen with skylights",
+    description: "Vaulted ceiling, skylights, and white cabinets",
+  },
+  {
+    src: gallery08,
+    alt: "Gray shaker cabinets with tray ceiling",
+    description: "Gray shaker cabinets, tray ceiling, and dark wood floors",
+  },
+  {
+    src: gallery09,
+    alt: "White cabinets with black island and pendants",
+    description: "White kitchen, black island, and pendant lighting",
+  },
+  {
+    src: gallery10,
+    alt: "Traditional dark wood kitchen",
+    description: "Dark wood cabinets with stone mosaic backsplash",
+  },
+  {
+    src: gallery13,
+    alt: "Dark wood and granite breakfast bar",
+    description: "Dark wood cabinets, granite counters, and stainless appliances",
+  },
+  {
+    src: gallery14,
+    alt: "Cream cabinets with granite island",
+    description: "Cream cabinets, granite island, and cooktop",
+  },
+  {
+    src: gallery18,
+    alt: "Two-tone white and gray kitchen with wine rack",
+    description: "White and gray two-tone kitchen with built-in wine rack",
+  },
+  {
+    src: gallery19,
+    alt: "White shaker kitchen with pattern tile backsplash",
+    description: "White shaker cabinets with patterned tile backsplash",
+  },
+  {
+    src: gallery20,
+    alt: "Cream cabinets with marble-look counters",
+    description: "Cream cabinets with marble-look countertops",
+  },
+  {
+    src: gallery21,
+    alt: "White kitchen with dark herringbone backsplash",
+    description: "White kitchen with dark herringbone tile backsplash",
   },
 ];
 
