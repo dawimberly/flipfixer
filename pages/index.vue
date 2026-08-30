@@ -164,8 +164,8 @@
 
           <div class="gallery-preview">
             <img
-              src="~/assets/images/gallery-10-traditional-dark-wood-stone-mosaic-backsplash.jpg"
-              alt="Traditional dark wood kitchen"
+              src="~/assets/images/gallery-12-walk-in-shower-stone-mosaic.jpg"
+              alt="Custom walk-in shower remodel"
               class="w-full h-80 object-cover rounded-lg"
             />
           </div>

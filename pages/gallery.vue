@@ -49,8 +49,8 @@
           <div class="spotlight-card group">
             <div class="relative overflow-hidden">
               <img
-                src="~/assets/images/gallery-06-bright-white-open-concept-with-fireplace-great-room.jpg"
-                alt="Open concept kitchen and great room remodel"
+                src="~/assets/images/gallery-11-spa-tub-pebble-walk-in-shower.jpg"
+                alt="Spa bathroom with soaking tub and walk-in shower"
                 class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div
@@ -60,10 +60,10 @@
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-3">Open Concept Kitchen</h3>
+              <h3 class="text-xl font-semibold mb-3">Spa Bathroom Remodel</h3>
               <p class="text-gray-300">
-                Bright white cabinets, granite counters, and a stone fireplace tie
-                the kitchen and great room together.
+                Jetted soaking tub under an arched window plus a walk-in shower
+                with pebble flooring and frameless glass.
               </p>
             </div>
           </div>
@@ -207,8 +207,13 @@ import gallery07 from "@/assets/images/gallery-07-vaulted-ceiling-skylights-whit
 import gallery08 from "@/assets/images/gallery-08-gray-shaker-cabinets-tray-ceiling.jpg";
 import gallery09 from "@/assets/images/gallery-09-white-cabinets-black-island-pendant-lighting.jpg";
 import gallery10 from "@/assets/images/gallery-10-traditional-dark-wood-stone-mosaic-backsplash.jpg";
+import gallery11 from "@/assets/images/gallery-11-spa-tub-pebble-walk-in-shower.jpg";
+import gallery12 from "@/assets/images/gallery-12-walk-in-shower-stone-mosaic.jpg";
 import gallery13 from "@/assets/images/gallery-13-dark-wood-granite-breakfast-bar.jpg";
 import gallery14 from "@/assets/images/gallery-14-cream-cabinets-granite-island-cooktop.jpg";
+import gallery15 from "@/assets/images/gallery-15-navy-island-gold-hardware.jpg";
+import gallery16 from "@/assets/images/gallery-16-charcoal-island-industrial-stools.jpg";
+import gallery17 from "@/assets/images/gallery-17-navy-island-pattern-tile-backsplash.jpg";
 import gallery18 from "@/assets/images/gallery-18-two-tone-white-gray-wine-rack.jpg";
 import gallery19 from "@/assets/images/gallery-19-white-shaker-pattern-tile-backsplash.jpg";
 import gallery20 from "@/assets/images/gallery-20-cream-cabinets-marble-look-counters.jpg";
@@ -267,6 +272,17 @@ const projectImages = [
     description: "Dark wood cabinets with stone mosaic backsplash",
   },
   {
+    src: gallery11,
+    alt: "Spa bathroom with soaking tub and walk-in shower",
+    description:
+      "Jetted soaking tub and walk-in shower with pebble flooring",
+  },
+  {
+    src: gallery12,
+    alt: "Custom walk-in shower with stone-look tile",
+    description: "Stone-look tile, mosaic niche, bench, and rainfall head",
+  },
+  {
     src: gallery13,
     alt: "Dark wood and granite breakfast bar",
     description: "Dark wood cabinets, granite counters, and stainless appliances",
@@ -275,6 +291,21 @@ const projectImages = [
     src: gallery14,
     alt: "Cream cabinets with granite island",
     description: "Cream cabinets, granite island, and cooktop",
+  },
+  {
+    src: gallery15,
+    alt: "Navy island kitchen with gold hardware",
+    description: "Navy island with gold hardware accents",
+  },
+  {
+    src: gallery16,
+    alt: "Charcoal island kitchen with industrial stools",
+    description: "Charcoal island with industrial bar stools",
+  },
+  {
+    src: gallery17,
+    alt: "Navy island with pattern tile backsplash",
+    description: "Navy island with patterned tile backsplash",
   },
   {
     src: gallery18,
